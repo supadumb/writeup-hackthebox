@@ -18,9 +18,9 @@
 | Netmon                                           | Easy            | Window | ...          | ✔️      | 11.04.2022     | ❌       |
 | Knife                                            | Easy            | Linux  | 22.05.2021   | ✔️      | 19.07.2022     | ❌       |
 | Late                                             | Easy (+20)            | Linux  | 23.04.2022   | ❌      | 12.07.2022     | ❌       |
-| [Red Panda](machines.HTB/RedPanda/README.md)     | Easy (+20)   | Linux  | 12.07.2022   | ❌      | 12.07.2022     | ✔️       |
-| [Open Source](machines.HTB/OpenSource/README.md) | Easy (+20)   | Linux  | 23.07.2022   | ❌      | 23.07.2022     | ✔️       |
-| [Trick](machines.HTB/Trick/README.md)            | Easy (+20)   | Linux  | 22.07.2022   | ❌      | 23.07.2022     | ✔️       |
+| [Red Panda](machines.HTB/RedPanda/README.md)     | Easy (+20)   | Linux  | 09.07.2022   | ❌      | 12.07.2022     | ✔️       |
+| [Open Source](machines.HTB/OpenSource/README.md) | Easy (+20)   | Linux  | 21.05.2022   | ❌      | 23.07.2022     | ✔️       |
+| [Trick](machines.HTB/Trick/README.md)            | Easy (+20)   | Linux  | 18.06.2022   | ❌      | 23.07.2022     | ✔️       |
 | Faculty                                          | Medium (+30) | Linux  | 02.07.2022   | ❌      | 25.07.2022     | ❌       |
 
 ### 📝 List of challenges
@@ -44,10 +44,10 @@
 | LoveTok             | Easy (+2)  | Web       | ❌      | 11.07.2022     | ❌       |
 | Weather App         | Easy (+3)  | Web       | ❌      | 11.07.2022     | ✔️       |
 | [Toxic](challenges.HTB/Toxic/README.md)               | Easy (+2)  | Web       | ❌      | 13.07.2022     | ✔️       |
-| Spiky Tamagotch     | Easy (+3)  | Web       | ❌      | 13.07.2022     | ✔️       |
+| [Spiky Tamagotchi](challenges.HTB/SpikyTamagotchi/README.md)    | Easy (+3)  | Web       | ❌      | 13.07.2022     | ✔️       |
 | Illumination        | Easy (+1)  | Forensics | ❌      | 14.07.2022     | ❌       |
-| BlinkerFluids       | Easy (+2)  | Web       | ❌      | 23.07.2022     | ✔️       |
-| Intergalactic Post  | Easy (+2)  | Web       | ❌      | 23.07.2022     | ✔️       |
+| [BlinkerFluids](challenges.HTB/BlinkerFluids/README.md)      | Easy (+2)  | Web       | ❌      | 23.07.2022     | ✔️       |
+| [Intergalactic Post](challenges.HTB/IntergalacticPost/README.md)   | Easy (+2)  | Web       | ❌      | 23.07.2022     | ✔️       |
 
 
 
