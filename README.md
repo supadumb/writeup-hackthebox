@@ -44,10 +44,10 @@
 | LoveTok             | Easy (+2)  | Web       | ❌      | 11.07.2022     | ❌       |
 | Weather App         | Easy (+3)  | Web       | ❌      | 11.07.2022     | ✔️       |
 | [Toxic](challenges.HTB/Toxic/README.md)               | Easy (+2)  | Web       | ❌      | 13.07.2022     | ✔️       |
-| [Spiky Tamagotchi](challenges.HTB/SpikyTamagotchi/README.md)    | Easy (+3)  | Web       | ❌      | 13.07.2022     | ✔️       |
+| Spiky Tamagotch     | Easy (+3)  | Web       | ❌      | 13.07.2022     | ✔️       |
 | Illumination        | Easy (+1)  | Forensics | ❌      | 14.07.2022     | ❌       |
-| [BlinkerFluids](challenges.HTB/BlinkerFluids/README.md)      | Easy (+2)  | Web       | ❌      | 23.07.2022     | ✔️       |
-| [Intergalactic Post](challenges.HTB/IntergalacticPost/README.md)   | Easy (+2)  | Web       | ❌      | 23.07.2022     | ✔️       |
+| BlinkerFluids       | Easy (+2)  | Web       | ❌      | 23.07.2022     | ✔️       |
+| Intergalactic Post  | Easy (+2)  | Web       | ❌      | 23.07.2022     | ✔️       |
 
 
 
