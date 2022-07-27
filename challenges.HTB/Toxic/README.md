@@ -3,6 +3,7 @@
 Humanity has exploited our allies, the dart frogs, for far too long, take back the freedom of our lovely poisonous friends. Malicious input is out of the question when dart frogs meet industrialisation. 🐸
 
 **Tags:** `PHP`, `source-code-analysis`, `insecure-deserialization`, `log-poisioning`
+
 # Quick Preview
 
 Đây là một bài White Box, chúng ta được cung cấp source code của Web App.
