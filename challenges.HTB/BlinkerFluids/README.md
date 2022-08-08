@@ -1,10 +1,49 @@
-# CHALLENGE DESCRIPTION
+# `CHALLENGE DESCRIPTION`
+
+<table>
+<th style="text-align: center">
+<img width="600" height="1">
+
+```
+CHALLENGE INFO
+```
+
+</th>
+
+<th style="text-align: center">
+<img width="350" height="1">
+
+```
+TABLE OF CONTENT
+```
+
+</th>
+<tr>
+
+<td width="600">      
+
+<code> Blinker Fluids </code>
 
 Once known as an imaginary liquid used in automobiles to make the blinkers work is now one of the rarest fuels invented on Klaus' home planet Vinyr. The Golden Fang army has a free reign over this miraculous fluid essential for space travel thanks to the Blinker Fluids™ Corp. Ulysses has infiltrated this supplier organization's one of the HR department tools and needs your help to get into their server. Can you help him?
 
 **Tags:** `javasciprt`, `CVE-2021-23639`, `source-code-analysis`
 
-# Quick Preview
+</td>
+
+<td>
+<img width="600" height="1">
+
+- [`CHALLENGE DESCRIPTION`](#challenge-description)
+- [`QUICK PREVIEW`](#quick-preview)
+	- [Source Code Analysis](#source-code-analysis)
+- [`EXPLOITATION`](#exploitation)
+	- [`👽` Solution 1](#-solution-1)
+	- [`👽` Solution 2](#-solution-2)
+</td>
+
+</tr></table>
+
+# `QUICK PREVIEW`
 
 Đây là một bài White Box, chúng ta được cung cấp source code của Web App.
 
@@ -59,7 +98,7 @@ Sau khi tạo hoá đơn thành công, mình sẽ được redirect về index c
 
 → Chức năng của trang web cũng khá thú vị ha. 
 
-# Source Code Analysis
+## Source Code Analysis
 Khi vào folder challenges, mình để ý thấy trong file `package.json` ở mục dependencies có xuất hiện một package bị lỗi `md-to-pdf` version `4.1.0`.  [CVE-2021-23639](https://github.com/advisories/GHSA-x949-7cm6-fm6p)
 
 > Về cơ bản, package này cho phép ta thực hiện RCE thông qua việc convert sang PDF từ content của markdown.
@@ -80,7 +119,7 @@ Khi vào folder challenges, mình để ý thấy trong file `package.json` ở 
 }
 ```
 
-# Exploit
+# `EXPLOITATION`
 
 Bắt gói tin POST khi thực hiện thêm hoá đơn bằng Burpsuite
 
@@ -94,7 +133,7 @@ Bây giờ chỉ cần replace `"dumb"` thành payload có cấu trúc như sau:
 
 Tới đây mình có 2 cách exploit:
 
-## Solution 1
+## `👽` Solution 1
 
 Để ý rằng các invoice sẽ được lưu tại một folder nhất định nào đó. Đọc file `MDHelper.js` sẽ cho ta biết được đó là folder `static/invoices/`
 
@@ -138,7 +177,7 @@ Bây giờ chỉ cần truy cập vào endpoint để lấy flag thôi
 
 ![](../../attachments/Pasted%20image%2020220727140800.png)
 
-## Solution 2
+## `👽` Solution 2
 Đọc trực tiếp trên file PDF sau khi render.
 
 ![](../../attachments/Pasted%20image%2020220727141643.png)

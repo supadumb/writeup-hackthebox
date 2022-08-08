@@ -1,18 +1,91 @@
-# Quick Overview
+# `QUICK OVERVIEW`  
 
-![](../../attachments/789e24a78e57e307944d8dbbde67cc32_thumb.png)         
+<table>
+<th style="text-align: center">
+<img width="600" height="1">
 
-| `Open Source`   |             |
-| --------------- | ----------- |
-| Release Date:   | 21 May 2022 |
-| OS:             | Linux 🐧    |
-| Difficulty:     | Easy        |
-| Base Points:    | **20**      |
-| Date Completed: | 23 Jul 2022 |
+```
+BOX INFO
+```
 
-**Tags:**  `upload-file`, `directory-traversal`,  `source-code-analysis`,`docker`, `git`, `git-hook`, `reverse-proxy`
+</th>
 
-# Enumration
+<th style="text-align: center">
+<img width="350" height="1">
+
+```
+TABLE OF CONTENT
+```
+
+</th>
+<tr>
+
+<td>      
+
+<table style="table-layout: auto;width: 600px">
+  <thead>
+    <tr>
+      <th width="25%">Name</th>
+      <th style="text-align: right;font-size: x-large;">
+        <img src="../../attachments/789e24a78e57e307944d8dbbde67cc32_thumb.png" width="35px" align="center"> 
+        <code> Open Source </code>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Release Date</td>
+      <td style="text-align: right"> 21 May 2022 </td>
+    </tr>
+    <tr>
+      <td>Difficulty</td>
+      <td style="text-align: right"> Easy </td>
+    </tr>
+    <tr>
+      <td>OS</td>
+      <td style="text-align: right"> Linux 🐧 </td>
+    </tr>    
+    <tr>
+      <td>Base Points</td>
+      <td style="text-align: right"><span class="diff-Hard"><strong>20</strong></span></td>
+    </tr>
+    <tr>
+      <td>Date Completed</td>
+      <td style="text-align: right"> 23 Jul 2022 </td>
+    </tr>    
+  </tbody>
+</table>
+
+<img width="600" height="1">
+
+**Tags:**  `upload-file`, `directory-traversal`,  `source-code-analysis`, <br>
+`docker`, `git`, `git-hook`, `reverse-proxy` 
+</td>
+
+<td>
+<img width="600" height="1">
+
+- [`QUICK OVERVIEW`](#quick-overview)
+- [`ENUMRATION`](#enumration)
+  - [`🛸` Web Service Enumration](#-web-service-enumration)
+    - [Git review](#git-review)
+      - [GitTools](#gittools)
+    - [Source code review](#source-code-review)
+- [`EXPLOITATION`](#exploitation)
+  - [Exploit Flask App](#exploit-flask-app)
+  - [Quick look at container](#quick-look-at-container)
+  - [Python3 Reverse Shell](#python3-reverse-shell)
+  - [Chisel Tunnel](#chisel-tunnel)
+  - [Rustscan](#rustscan)
+  - [Gitea](#gitea)
+  - [`👨‍🚀` User Own](#-user-own)
+- [`PRIVILEDGE ESCALATION`](#priviledge-escalation)
+  - [`👽` Root Own](#-root-own)
+</td>
+
+</tr></table>
+         
+# `ENUMRATION`
 Như thường lệ, sử dụng NMAP để scan các ports, services của target.
 
 ```console
@@ -134,7 +207,7 @@ Hmm :confused: , có port 3000 nhìn lạ quá ta. Mà không sao, cứ sắp x�
 
 > 80 http   → 22 ssh, 3000 ppp
 
-## Web Service Enumration
+## `🛸` Web Service Enumration
 
 Bắt đầu từ port 80, truy cập vào địa chỉ `http://10.10.11.164/`, ta có được giao diện của trang web như sau.
 
@@ -370,7 +443,7 @@ def recursive_replace(search, replace_me, with_me):
 
 →  Từ những thông tin trên, mình đã có một hướng đi để thực hiện khai thác `path traversal`.
 
-# Exploitation
+# `EXPLOITATION`
 ## Exploit Flask App
 
 Để kiếm chứng, mình sẽ thử upload một file `views.py` mới đè lên file `views.py` cũ có nội dung như sau:
@@ -563,7 +636,7 @@ kali@kali:~/machines.HTB/OpenSource/exploit$ ssh dev01@10.10.11.164 -i id_rsa
 dev01@opensource:~$
 ```
 
-## User Own
+## `👨‍🚀` User Own
 
 Lấy `flag` của `user`. 
 
@@ -572,7 +645,7 @@ dev01@opensource:~$ cat user.txt
 ################################
 ```
 
-# Privilege Escalation
+# `PRIVILEDGE ESCALATION`
 Để thực hiện leo thang đặc quyền, ta cần phải thực hiện các bước enum thông thường bằng tay trước: [S1REN's way](https://sirensecurity.io/blog/linux-privilege-escalation-resources/)
 
 → `Nothing` → bằng tay không được thì dùng `tool` thôi → sử dụng `pspy64` để quan sát các process.
@@ -654,7 +727,7 @@ Giờ ta cứ chờ đợi cho đến khi sticky bit được set.
 
 ![](../../attachments/Screenshot_2022-07-25_05_55_48%201.png)
 
-## Root Own
+## `👽` Root Own
 
 Lấy `flag` của `root` thôi.
 

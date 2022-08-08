@@ -1,10 +1,49 @@
-# CHALLENGE DESCRIPTION
+# `CHALLENGE DESCRIPTION`
+
+<table>
+<th style="text-align: center">
+<img width="600" height="1">
+
+```
+CHALLENGE INFO
+```
+
+</th>
+
+<th style="text-align: center">
+<img width="350" height="1">
+
+```
+TABLE OF CONTENT
+```
+
+</th>
+<tr>
+
+<td width="600">      
+
+<code> Toxic </code>
 
 Humanity has exploited our allies, the dart frogs, for far too long, take back the freedom of our lovely poisonous friends. Malicious input is out of the question when dart frogs meet industrialisation. 🐸
 
 **Tags:** `PHP`, `source-code-analysis`, `insecure-deserialization`, `log-poisioning`
 
-# Quick Preview
+</td>
+
+<td>
+<img width="600" height="1">
+
+- [`CHALLENGE DESCRIPTION`](#challenge-description)
+- [`QUICK PREVIEW`](#quick-preview)
+- [`SOURCE CODE ANALYSIS`](#source-code-analysis)
+- [`EXPLOITAION`](#exploitaion)
+	- [Log Poisoning](#log-poisoning)
+	- [`👽` Get Flag](#-get-flag)
+</td>
+
+</tr></table>
+
+# `QUICK PREVIEW`
 
 Đây là một bài White Box, chúng ta được cung cấp source code của Web App.
 
@@ -43,7 +82,7 @@ Toxic
 
 → Mình chưa tìm thấy tính năng gì của trang web cả. → Đọc source code thôi!
 
-# Source Code Analysis
+# `SOURCE CODE ANALYSIS`
 Khi mình đọc được code của file `index.php`, mình biết được sự tồn tại của cookie cũng như cách hình thành nên nó.
 
 App sẽ tạo giá trị của cookie bằng cách thực hiện quá trình `serialize` biến `$page`, sau đó encode bằng thuật toán base64. Đồng thời cũng gán thời gian tồn tại của `cookie` là 86400 giây.
@@ -99,7 +138,7 @@ class PageModel
 + `Untrusted Data` ( `$_COOKIE['PHPSESSID']` ) rơi vào quá trình `Deserialize`
 + Một `object` có `magic method` thực thi một `sink` nguy hiểm ( `include()` )
 
-# Exploit
+# `EXPLOITAION`
 
 Quá trình exploit khá đơn giản (khi chưa bị Object Injection cũng như Gadget Chains).
 
@@ -172,7 +211,7 @@ Kết quả:
 
 ![](../../attachments/Pasted%20image%2020220727053501.png)
 
-## Get Flag 
+## `👽` Get Flag 
 
 Tiến hành đọc FLAG thôi
 

@@ -1,20 +1,81 @@
-# Quick Overview
+# `QUICK OVERVIEW`  
 
-![](../../attachments/ca56ef43d636aff7da48a8b484756cfe_thumb.png)         
+<table>
+<th style="text-align: center">
+<img width="600" height="1">
 
-| `Trick`         |             |
-| --------------- | ----------- |
-| Release Date:   | 18 Jun 2022 |
-| OS:             | Linux 🐧    |
-| Difficulty:     |            Easy | 
-| Base Points:    | **20**          |
-| Date Completed: | 22 Jul 2022 |
+```
+BOX INFO
+```
+
+</th>
+
+<th style="text-align: center">
+<img width="350" height="1">
+
+```
+TABLE OF CONTENT
+```
+
+</th>
+<tr>
+
+<td>      
+<img width="600" height="1">
+
+<table style="table-layout: auto;width: 600px">
+  <thead>
+    <tr>
+      <th width="25%">Name</th>
+      <th style="text-align: right;font-size: x-large;">
+        <img src="../../attachments/ca56ef43d636aff7da48a8b484756cfe_thumb.png" width="35px" align="center"> 
+        <code> Trick </code>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Release Date</td>
+      <td style="text-align: right"> 18 Jun 2022 </td>
+    </tr>
+    <tr>
+      <td>Difficulty</td>
+      <td style="text-align: right"> Easy </td>
+    </tr>
+    <tr>
+      <td>OS</td>
+      <td style="text-align: right"> Linux 🐧 </td>
+    </tr>    
+    <tr>
+      <td>Base Points</td>
+      <td style="text-align: right"><span class="diff-Hard"><strong>20</strong></span></td>
+    </tr>
+    <tr>
+      <td>Date Completed</td>
+      <td style="text-align: right"> 22 Jul 2022 </td>
+    </tr>    
+  </tbody>
+</table>
+
 
 **Tags:**  `DNS` ,`SQLi`, `heavy-enumration`, `source-code-analysis`,  `LFI`, `Fail2ban` 
+</td>
 
-# Enumeration
+<td>
 
-## Services Enumration
+- [`QUICK OVERVIEW`](#quick-overview)
+- [`ENUMRATION`](#enumration)
+  - [`🛸` Web Services Enumeration](#-web-services-enumeration)
+  - [`🛸` DNS Service Enumration](#-dns-service-enumration)
+- [`EXPLOITATION`](#exploitation)
+  - [`👨‍🚀` User Own](#-user-own)
+- [`PRIVILEDGE ESCALATION`](#priviledge-escalation)
+  - [`👽` Root Own](#-root-own)
+</td>
+
+</tr></table>
+
+# `ENUMRATION`
 
 Như thường lệ, sử dụng NMAP để scan các ports, services của target.
 
@@ -58,7 +119,7 @@ Nmap done: 1 IP address (1 host up) scanned in 48.44 seconds
 
 > 80 http → 53 dns → 25 smtp → 22 ssh
 
-### Web Services Enumeration:
+## `🛸` Web Services Enumeration
 Dưới đây là giao diện sơ lược của trang web có địa chỉ IP: `10.10.11.166`
 
 ![](../../attachments/Screenshot_2022-07-24_12_40_30.png)
@@ -67,7 +128,7 @@ Dưới đây là giao diện sơ lược của trang web có địa chỉ IP: `
 → Fuzzing directories, files, parameter → Manual Inspection (*View the source, Luke !*)
 Sau khi thực hiện các thao tác Enum cơ bản trên, ta không thấy có gì thú vị ở đây cả, chỉ đơn thuần là một trang web tĩnh. (Tạm thời để sang một bên ha 🐧)
 
-### DNS Service Enumration
+## `🛸` DNS Service Enumration
 Thực hiện truy vấn các Record cũng như xác định Transfer Zone của `target`
 
 ```console
@@ -109,7 +170,7 @@ thôi 🐧
  ![](../../attachments/Pasted_image_20220725074546.png)
 
 Một hồi dạo quanh trang web, có vẻ như trang web này không có tính năng nào thú vị để khai thác, chỉ đơn thuần là CRUD.
-# Exploitation
+# `EXPLOITATION`
 Với các thông tin trên, sử dụng công cụ `sqlmap` để dễ dàng khai thác lỗ hổng trang web một cách nhanh chóng.
 
 Bắt gói tin POST khi đăng nhập, và ghi nó vào file `trick.req` để chuẩn bị cho việc sử dụng `sqlmap`
@@ -449,7 +510,7 @@ fvJDZa67XNHzrxi+IJhaN0D5bVMdjjFHAAAADW1pY2hhZWxAdHJpY2sBAgMEBQ==
 
 → Ngon, giả thuyết hoàn toàn đúng. Thực hiện kết nối tới server bằng ssh rồi lấy flag thôi. 
 
-## User Own
+## `👨‍🚀` User Own
 
 ```console
 kali@kali:~/machines.HTB/Trick/exploit$ ssh michael@10.10.11.166 -i id_rsa
@@ -457,7 +518,7 @@ michael@trick:~$ cat user.txt
 ################################
 ```
 
-# Privilege escalation
+# `PRIVILEDGE ESCALATION`
 Để thực hiện leo thang đặc quyền, ta cần phải thực hiện các bước enum thông thường bằng tay trước: [S1REN's way](https://sirensecurity.io/blog/linux-privilege-escalation-resources/)
 
 Sau khi kiểm tra với `ps -aux`, ta thấy `fail2ban` service đang chạy. Và với lệnh `sudo -l`, ta phát hiện thêm user `michael` hoàn toàn có thể chạy lệnh restart `fail2ban` dưới quyền roo mà không cần password
@@ -585,6 +646,8 @@ michael@trick:/etc/fail2ban$ id
 uid=1001(michael) gid=1001(michael) groups=1001(michael),1002(security)
 ```
 
+## `👽` Root Own
+
 → **Plan**: Thực hiện tạo một file `iptables-multiport.conf` mới và rename file `iptables-multiport.conf` cũ thành `iptables-multiport.conf.bak` . Trong file mới, ta sẽ thêm command mà ta muốn. Có thể là reverse shell hoặc là set SUID cho /bin/bash, ... .
 
 ```console
@@ -611,8 +674,6 @@ kali@kali:~/machines.HTB/Trick/exploit$ sudo nmap trick.htb -p 22 --script ssh-b
 ```
 
 Cuối cùng là chờ đợi, cho đến khi xuất hiện xuất hiện file 
-
-## Root Own
 
 ```console
 michael@trick:~$ cat /tmp/root.txt

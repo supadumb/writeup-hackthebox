@@ -1,8 +1,50 @@
-# CHALLENGE DESCRIPTION
+# `CHALLENGE DESCRIPTION`
+
+<table>
+<th style="text-align: center">
+<img width="600" height="1">
+
+```
+CHALLENGE INFO
+```
+
+</th>
+
+<th style="text-align: center">
+<img width="350" height="1">
+
+```
+TABLE OF CONTENT
+```
+
+</th>
+<tr>
+
+<td width="600">      
+
+<code> Spiky Tamagotchi </code>
 
 Captain Spiky comes from a rare species of creatures who can only breathe underwater. During the energy-crisis war, he was captured as a war prisoner and later forced to be a Tamagotchi pet for a child of a general of nomadic tribes. He is forced to react in specific ways and controlled remotely purely for the amusement of the general's children. The Paraman crew needs to save the captain of his misery as he is potentially a great asset for the war against Draeger. Can you hack into the Tamagotchi controller to rescue the captain?
 
-# Quick Preview
+**Tags:** 
+
+</td>
+
+<td>
+<img width="600" height="1">
+
+- [`CHALLENGE DESCRIPTION`](#challenge-description)
+- [`QUICK PREVIEW`](#quick-preview)
+- [`EXPLOITAION`](#exploitaion)
+	- [Source Code Analysis](#source-code-analysis)
+	- [Remote Code Execution](#remote-code-execution)
+	- [`👽` Get Flag](#-get-flag)
+- [`Reference`](#reference)
+</td>
+
+</tr></table>
+
+# `QUICK PREVIEW`
 
 Đây là một bài White Box, chúng ta được cung cấp source code của Web App.
 
@@ -46,9 +88,11 @@ SpikyTamagotchi
 
 ![](../../attachments/Pasted%20image%2020220727225817.png)
 
-# Source Code Analysis && Exploit
+# `EXPLOITAION`
 Điều ta quan tâm bây giờ là làm thế nào để login được vào website.
 
+
+## Source Code Analysis
 Trong file routes/index.js, việc login sẽ được thực hiện thông qua api `api/login` giá trị nhận vào sẽ là username và password thông qua `req.body`. Api/login kiểm tra user bằng method `loginUser()` của Database.
 
 ```javascript
@@ -188,7 +232,7 @@ Connection: close
 
 Bây giờ copy cookie vào website là ta đã đăng nhập thành công!
 
-# Remote Code Execution
+## Remote Code Execution
 
 Truy cập vào endpoint `/interface`, ta có giao diện trò chơi nuôi thú như dưới:
 
@@ -287,7 +331,7 @@ POST /api/activity HTTP/1.1
 
 > Thay thế: `<burp-collabtor-client>` và `<command>` là lệnh mình muốn execute.
 
-## Get Flag
+## `👽` Get Flag
 
 Thực hiện list file `flag` ở thư mục root
 
@@ -297,6 +341,6 @@ Thực hiện lấy nội dung `flag`
 
 ![](../../attachments/Pasted%20image%2020220727225300.png)
 
-# Reference
+# `Reference`
 
 [Finding an unseen SQL Injection by bypassing escape functions in mysqljs/mysql | by Flatt Security Inc. | Medium](https://flattsecurity.medium.com/finding-an-unseen-sql-injection-by-bypassing-escape-functions-in-mysqljs-mysql-90b27f6542b4)

@@ -1,10 +1,50 @@
-# CHALLENGE DESCRIPTION
+# `CHALLENGE DESCRIPTION`
+
+<table>
+<th style="text-align: center">
+<img width="600" height="1">
+
+```
+CHALLENGE INFO
+```
+
+</th>
+
+<th style="text-align: center">
+<img width="350" height="1">
+
+```
+TABLE OF CONTENT
+```
+
+</th>
+<tr>
+
+<td width="600">      
+
+<code> Intergalactic Post </code>
 
 The biggest intergalactic newsletter agency has constantly been spreading misinformation about the energy crisis war. Bonnie's sources confirmed a hostile takeover of the agency took place a few months back, and we suspect the Golden Fang army is behind this. Ulysses found us a potential access point to their agency servers. Can you hack their newsletter subscribe portal and get us entry?
 
 **Tags:** `PHP`, `source-code-analysis`, `SQLi`, `misc-configuration`
 
-# Quick Preview
+</td>
+
+<td>
+<img width="600" height="1">
+
+- [`CHALLENGE DESCRIPTION`](#challenge-description)
+- [`QUICK PREVIEW`](#quick-preview)
+	- [Source code analysis](#source-code-analysis)
+- [`EXPLOITATION`](#exploitation)
+	- [Blind SQL injection](#blind-sql-injection)
+	- [Remote Code Execution](#remote-code-execution)
+	- [`👽` Get Flag](#-get-flag)
+</td>
+
+</tr></table>
+
+# `QUICK PREVIEW`
 
 Đây là một bài White Box, chúng ta được cung cấp source code của Web App.
 
@@ -60,7 +100,7 @@ Có vẻ như mình thực hiện `POST`  data `email:test@mail.com` thông qua 
 
 → Website chỉ đơn giản như vậy. Đọc source code để thực sự xem App có gì ha.
 
-# Source code analysis
+## Source code analysis
 
 Khi đọc source code của App, trong file `Database.php` mình phát hiện rằng App sử dụng một database đó là `SQLite`. Ngoài ra, trong hàm `subscribeUser` có thể bị SQL injection nếu untrusted data rơi vào các biến `$ip_address`, `$email`.
 
@@ -178,7 +218,7 @@ class SubscriberModel extends Model
 + email (đương nhiên rồi)
 + IP (ở đây, mình sẽ sử dụng header `X-Forwarded-For` để bypass)
 → Thực hiện SQL injection
-# Exploit
+# `EXPLOITATION`
 ## Blind SQL injection
 Mình sử dụng payload như sau để kiểm tra, nếu App thực hiện gửi respone sau 2 giây → bị SQL injection, còn nhanh hơn → không bị.
 
@@ -226,7 +266,7 @@ Thực hiện truy cập đến endpoint `/lol.php` và nhập parameter `cmd` v
 
 → Okay, đã RCE thành công. 
 
-## Get Flag 
+## `👽` Get Flag 
 Tiến hành lấy `flag` thôi
 
 ![](../../attachments/Pasted%20image%2020220727125426.png)
