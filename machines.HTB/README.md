@@ -1,3 +1,5 @@
+<div align="center">
+
 ## 📁 `LIST OF MACHINES`
 
 | Name                                             | Difficulty      | OS     | Release Date | Retired | Completed Date | Write-Up |

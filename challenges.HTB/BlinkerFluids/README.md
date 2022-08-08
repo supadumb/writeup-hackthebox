@@ -11,7 +11,7 @@ CHALLENGE INFO
 </th>
 
 <th style="text-align: center">
-<img width="350" height="1">
+<img width="282" height="1">
 
 ```
 TABLE OF CONTENT
@@ -53,25 +53,25 @@ Sau khi giải nén folder `BlinkerFluids.zip`, ta được folder có cấu tr�
 BlinkerFluids
 └── web_blinkerfluids
     ├── challenge
-	│   ├── helpers
-	│   │   └── MDHelper.js
-	│   ├── routes
-	│   │   └── index.js
-	│   ├── static
-	│   │   ├── invoices
-	│   │   ├── css
-	│   │   ├── images
-	│   │   └── js
-	│   ├── views
-	│   │   └── index.html
-	│   ├── database.js
-	│   ├── index.js
+    │   ├── helpers
+    │   │   └── MDHelper.js
+    │   ├── routes
+    │   │   └── index.js
+    │   ├── static
+    │   │   ├── invoices
+    │   │   ├── css
+    │   │   ├── images
+    │   │   └── js
+    │   ├── views
+    │   │   └── index.html
+    │   ├── database.js
+    │   ├── index.js
     │   └── package.json
     ├── config
-	│   └── supervisord.conf
-	├── build-docker.sh
-	├── Dockerfile
-	└── flag.txt
+    │   └── supervisord.conf
+    ├── build-docker.sh
+    ├── Dockerfile
+    └── flag.txt
 ```
 
 Đây là giao diện của website.

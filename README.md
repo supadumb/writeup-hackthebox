@@ -1,6 +1,5 @@
-<div align="center">
 
-# 📚 `PUBLIC WRITE-UP` 📚
+---
 
 <div align="center">
 
@@ -14,9 +13,11 @@
 
 </div>
 
-<br>
+---
 
-## `LISTS`
+<div align="center">
+
+## `PUBLIC WRITE-UP`
 <table style="table-layout: fixed;"><tbody><tr>
 
 <td>
@@ -35,3 +36,6 @@
 </td>
 
 </tr></tbody></table>
+</div>
+
+---

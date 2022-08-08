@@ -11,7 +11,7 @@ CHALLENGE INFO
 </th>
 
 <th style="text-align: center">
-<img width="350" height="1">
+<img width="282" height="1">
 
 ```
 TABLE OF CONTENT
@@ -54,29 +54,29 @@ Sau khi giải nén folder `IntergalacticPost.zip`, ta được folder có cấu
 IntergalacticPost
 └── web_intergalactic_post
     ├── challenge
-	│   ├── controllers
-	│   │   ├── Controller.php
-	│   │   ├── IndexController.php
-	│   │   └── SubsController.php
-	│   ├── models
-	│   │   ├── Model.php
-	│   │   └── SubscriberModel.php
-	│   ├── static
-	│   │   ├── fonts
-	│   │   ├── css
-	│   │   ├── images
-	│   │   └── js
-	│   ├── models
-	│   │   └── index.php
-	│   ├── Database.html
-	│   ├── index.php
+    │   ├── controllers
+    │   │   ├── Controller.php
+    │   │   ├── IndexController.php
+    │   │   └── SubsController.php
+    │   ├── models
+    │   │   ├── Model.php
+    │   │   └── SubscriberModel.php
+    │   ├── static
+    │   │   ├── fonts
+    │   │   ├── css
+    │   │   ├── images
+    │   │   └── js
+    │   ├── models
+    │   │   └── index.php
+    │   ├── Database.html
+    │   ├── index.php
     │   └── Router.php
     ├── config
-	│   ├── fpm.conf
-	│   ├── nginx.conf
-	│   └── supervisord.conf
-	├── build-docker.sh
-	└── Dockerfile
+    │   ├── fpm.conf
+    │   ├── nginx.conf
+    │   └── supervisord.conf
+    ├── build-docker.sh
+    └── Dockerfile
 ```
 
 → Ta có cái nhìn sơ lược về Web App: 

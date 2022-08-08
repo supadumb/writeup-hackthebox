@@ -1,3 +1,5 @@
+<div align="center">
+
 ## 📁 `LIST OF CHALLENGES`
 
 | Name                | Difficulty | Category  | Retired | Completed Date | Write-Up |

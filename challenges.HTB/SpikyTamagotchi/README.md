@@ -11,7 +11,7 @@ CHALLENGE INFO
 </th>
 
 <th style="text-align: center">
-<img width="350" height="1">
+<img width="282" height="1">
 
 ```
 TABLE OF CONTENT
@@ -54,28 +54,28 @@ Sau khi giải nén folder `SpikyTamagotchi.zip`, ta được folder có cấu t
 SpikyTamagotchi
 └── web_spiky_tamagotchi
     ├── challenge
-	│   ├── helpers
-	│   │   ├── JWTHelper.js
-	│   │   └── SpikyFactor.js
-	│   ├── middleware
-	│   │   └── AuthMiddleware.js
-	│   ├── static
-	│   │   ├── css
-	│   │   ├── images
-	│   │   └── js
-	│   ├── routes
-	│   │   └── index.php
-	│   ├── views
-	│   │   ├── index.html
-	│   │   └── interface.html
-	│   ├── database.js
-	│   ├── index.php
+    │   ├── helpers
+    │   │   ├── JWTHelper.js
+    │   │   └── SpikyFactor.js
+    │   ├── middleware
+    │   │   └── AuthMiddleware.js
+    │   ├── static
+    │   │   ├── css
+    │   │   ├── images
+    │   │   └── js
+    │   ├── routes
+    │   │   └── index.php
+    │   ├── views
+    │   │   ├── index.html
+    │   │   └── interface.html
+    │   ├── database.js
+    │   ├── index.php
     │   └── package.json
     ├── config
-	│   └── supervisord.conf
-	├── build-docker.sh
-	├── Dockerfile
-	└── flag.txt
+    │   └── supervisord.conf
+    ├── build-docker.sh
+    ├── Dockerfile
+    └── flag.txt
 ```
 
 →  Ta có cái nhìn tổng quan về Web App, sử dụng techonology:

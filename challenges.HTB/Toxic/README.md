@@ -11,7 +11,7 @@ CHALLENGE INFO
 </th>
 
 <th style="text-align: center">
-<img width="350" height="1">
+<img width="282" height="1">
 
 ```
 TABLE OF CONTENT
@@ -53,23 +53,23 @@ Sau khi giải nén folder `Toxic.zip`, ta được folder có cấu trúc như 
 Toxic
 └── web_toxic
     ├── challenge
-	│   ├── models
-	│	│   └── PageModel.php
-	│   ├── static
-	│   │   ├── basement
-	│   │   ├── css
-	│   │   ├── images
-	│   │   └── js
-	│   ├── index.html
+    │   ├── models
+    │   │   └── PageModel.php
+    │   ├── static
+    │   │   ├── basement
+    │   │   ├── css
+    │   │   ├── images
+    │   │   └── js
+    │   ├── index.html
     │   └── index.php
     ├── config
-	│   ├── fpm.conf
-	│   ├── nginx.conf
-	│   └── supervisord.conf
-	├── build-docker.sh
-	├── Dockerfile
-	├── entrypoint.sh
-	└── flag
+    │   ├── fpm.conf
+    │   ├── nginx.conf
+    │   └── supervisord.conf
+    ├── build-docker.sh
+    ├── Dockerfile
+    ├── entrypoint.sh
+    └── flag
 ```
 
 → Ta có cái nhìn sơ lược về Web App: 
