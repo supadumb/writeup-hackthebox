@@ -11,7 +11,7 @@ CHALLENGE INFO
 </th>
 
 <th style="text-align: center">
-<img width="350" height="1">
+<img width="282" height="1">
 
 ```
 TABLE OF CONTENT
