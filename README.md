@@ -17,7 +17,7 @@
 
 <div align="center">
 
-## `PUBLIC WRITE-UP`
+## `PUBLIC WRITE-UP` - by [@supadumb](https://github.com/supadumb)
 <table style="table-layout: fixed;"><tbody><tr>
 
 <td>
