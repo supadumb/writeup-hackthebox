@@ -15,6 +15,6 @@
 | Knife                                            | Easy            | Linux  | 22.05.2021   | ✔️      | 19.07.2022     | ❌       |
 | Late                                             | Easy (+20)            | Linux  | 23.04.2022   | ❌      | 12.07.2022     | ❌       |
 | [Red Panda](RedPanda/README.md)     | Easy (+20)   | Linux  | 09.07.2022   | ❌      | 12.07.2022     | ✔️       |
-| [Open Source](OpenSource/README.md#quick-overview) | Easy (+20)   | Linux  | 21.05.2022   | ❌      | 23.07.2022     | ✔️       |
-| [Trick](Trick/README.md#quick-overview)            | Easy (+20)   | Linux  | 18.06.2022   | ❌      | 23.07.2022     | ✔️       |
+| [Open Source](OpenSource/README.md#) | Easy (+20)   | Linux  | 21.05.2022   | ❌      | 23.07.2022     | ✔️       |
+| [Trick](Trick/README.md#)            | Easy (+20)   | Linux  | 18.06.2022   | ❌      | 23.07.2022     | ✔️       |
 | Faculty                                          | Medium (+30) | Linux  | 02.07.2022   | ❌      | 25.07.2022     | ❌       |
