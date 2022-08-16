@@ -20,8 +20,8 @@
 | Under Construction  | Easy (+3)  | Web       | ❌      | 06.07.2022     | ❌       |
 | LoveTok             | Easy (+2)  | Web       | ❌      | 11.07.2022     | ❌       |
 | Weather App         | Easy (+3)  | Web       | ❌      | 11.07.2022     | ✔️       |
-| [Toxic](Toxic#)               | Easy (+2)  | Web       | ❌      | 13.07.2022     | ✔️       |
-| [Spiky Tamagotchi](SpikyTamagotchi#)    | Easy (+3)  | Web       | ❌      | 13.07.2022     | ✔️       |
+| [Toxic](Toxic/README.md)               | Easy (+2)  | Web       | ❌      | 13.07.2022     | ✔️       |
+| [Spiky Tamagotchi](SpikyTamagotchi/README.md)    | Easy (+3)  | Web       | ❌      | 13.07.2022     | ✔️       |
 | Illumination        | Easy (+1)  | Forensics | ❌      | 14.07.2022     | ❌       |
-| [Blinker Fluids](BlinkerFluids#)      | Easy (+2)  | Web       | ❌      | 23.07.2022     | ✔️       |
-| [Intergalactic Post](IntergalacticPost#)   | Easy (+2)  | Web       | ❌      | 23.07.2022     | ✔️       |
+| [Blinker Fluids](BlinkerFluids/README.md)      | Easy (+2)  | Web       | ❌      | 23.07.2022     | ✔️       |
+| [Intergalactic Post](IntergalacticPost/README.md)   | Easy (+2)  | Web       | ❌      | 23.07.2022     | ✔️       |
