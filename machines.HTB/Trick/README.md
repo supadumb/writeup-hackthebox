@@ -317,7 +317,7 @@ Server: nginx/1.14.2
 ```
 
 → Có vẻ như là `taret` sử dụng `nginx` để host.
-+ Default root directory của `nginx` là `/var/www/html/`.
++ Default Document root của `nginx` là `/var/www/html/`.
 + Default directory chứa file cấu hình của `nginx` là `/etc/nginx/`.
 
 Nhưng ở đây cùng 1 server lại có nhiều hơn 1 trang web đang được host → có nhiều root directories tương ứng cho từng web → suy đoán: 
